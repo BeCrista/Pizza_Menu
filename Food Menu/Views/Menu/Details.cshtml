@@ -1,0 +1,33 @@
+﻿@model Food_Menu.Models.Dish
+@{
+    ViewData["Title"] = "Detalhes do Prato";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Imagem do prato -->
+        <div class="col-md-6">
+            <img src="@Model.ImageUrl" class="img-fluid rounded shadow" alt="@Model.Name">
+        </div>
+
+        <!-- Informações do prato -->
+        <div class="col-md-6">
+            <h1 class="mb-3">@Model.Name</h1>
+            <h3 class="text-muted mb-3">Preço: @Model.Price.ToString("F2") €</h3>
+
+            <!-- Ingredientes -->
+            <h4>Ingredientes:</h4>
+            <ul class="list-group mb-3">
+                @foreach (var item in Model.DishIngredients)
+                {
+                    <li class="list-group-item">@item.Ingredient.Name</li>
+                }
+            </ul>
+
+            <!-- Botão para voltar -->
+            <a href="@Url.Action("Index", "Menu")" class="btn btn-secondary">
+                Voltar ao Menu
+            </a>
+        </div>
+    </div>
+</div>

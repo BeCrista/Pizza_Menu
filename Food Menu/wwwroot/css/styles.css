@@ -1,0 +1,17 @@
+﻿.card-title {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+h1 {
+    color: #34495e;
+}
+
+.btn-primary {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}

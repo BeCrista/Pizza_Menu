@@ -1,0 +1,12 @@
+# Ignore arquivos temporários e de sistema
+.vs/
+*.user
+*.suo
+
+# Ignore arquivos de log, cache e builds
+bin/
+obj/
+*.log
+
+# Ignore pacotes do NuGet
+packages/
